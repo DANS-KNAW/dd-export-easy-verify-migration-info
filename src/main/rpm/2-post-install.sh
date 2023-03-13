@@ -18,7 +18,7 @@
 #include <service.sh>
 
 NUMBER_OF_INSTALLATIONS=$1
-MODULE_NAME=dd-verify-migration
+MODULE_NAME=dd-export-easy-verify-migration-info
 INSTALL_DIR=/opt/dans.knaw.nl/$MODULE_NAME
 PHASE="POST-INSTALL"
 

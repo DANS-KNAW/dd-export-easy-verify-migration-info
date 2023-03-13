@@ -63,6 +63,6 @@ logging:
     - type: file
       archive: true
       logFormat: "%-5p [%d{ISO8601}] [%t] %c: %m%n%rEx"
-      currentLogFilename: dd-verify-migration.log
-      archivedLogFilenamePattern: dd-verify-migration-%d.log
+      currentLogFilename: dd-export-easy-verify-migration-info.log
+      archivedLogFilenamePattern: dd-export-easy-verify-migration-info-%d.log
       archivedFileCount: 5

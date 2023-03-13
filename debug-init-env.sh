@@ -17,5 +17,5 @@
 
 echo -n "Pre-creating log..."
 TEMPDIR=data
-touch $TEMPDIR/dd-verify-migration.log
+touch $TEMPDIR/dd-export-easy-verify-migration-info.log
 echo "OK"

@@ -2,7 +2,7 @@
 Description=${project.name} Service
 
 [Service]
-ExecStart=/opt/dans.knaw.nl/dd-verify-migration/bin/dd-verify-migration server /etc/opt/dans.knaw.nl/dd-verify-migration/config.yml
+ExecStart=/opt/dans.knaw.nl/dd-export-easy-verify-migration-info/bin/dd-export-easy-verify-migration-info server /etc/opt/dans.knaw.nl/dd-export-easy-verify-migration-info/config.yml
 # Java returns 143 even if the SIGTERM was handled correctly.
 SuccessExitStatus=143
 

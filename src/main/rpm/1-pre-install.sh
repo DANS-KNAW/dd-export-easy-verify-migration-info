@@ -18,10 +18,11 @@
 #include <service.sh>
 
 NUMBER_OF_INSTALLATIONS=$1
-MODULE_NAME=dd-verify-migration
+MODULE_NAME=dd-export-easy-verify-migration-info
+USER_NAME=dd-verify-migration
 PHASE="PRE-INSTALL"
 
 echo "$PHASE: START (Number of current installations: $NUMBER_OF_INSTALLATIONS)"
 service_stop $MODULE_NAME $NUMBER_OF_INSTALLATIONS
-service_create_module_user $MODULE_NAME
+service_create_module_user $USER_NAME
 echo "$PHASE: DONE"

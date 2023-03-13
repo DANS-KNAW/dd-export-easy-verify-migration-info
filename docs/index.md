@@ -1,11 +1,11 @@
-dd-verify-migration
+dd-export-easy-verify-migration-info
 ===================
 
 SYNOPSIS
 --------
 
 ```text   
-dd-verify-migration { server | check  | load-from-fedora | load-from-vault | load-from-dataverse } ...
+dd-export-easy-verify-migration-info { server | check  | load-from-fedora | load-from-vault | load-from-dataverse } ...
 ```
 
 DESCRIPTION
@@ -76,27 +76,27 @@ EXAMPLES
 --------
 
 ```text
-dd-verify-migration load-from-dataverse
-dd-verify-migration load-from-vault -u uuids.txt
-dd-verify-migration load-from-fedora easy-fedora-to-bag-log.csv
+dd-export-easy-verify-migration-info load-from-dataverse
+dd-export-easy-verify-migration-info load-from-vault -u uuids.txt
+dd-export-easy-verify-migration-info load-from-fedora easy-fedora-to-bag-log.csv
 ```
 
 INSTALLATION AND CONFIGURATION
 ------------------------------
 Currently, this project is built as an RPM package for RHEL7/CentOS7 and later. The RPM will install the binaries to
-`/opt/dans.knaw.nl/dd-verify-migration` and the configuration files to `/etc/opt/dans.knaw.nl/dd-verify-migration`. 
+`/opt/dans.knaw.nl/dd-export-easy-verify-migration-info` and the configuration files to `/etc/opt/dans.knaw.nl/dd-export-easy-verify-migration-info`. 
 
 For installation on systems that do no support RPM and/or systemd:
 
 1. Build the tarball (see next section).
-2. Extract it to some location on your system, for example `/opt/dans.knaw.nl/dd-verify-migration`.
+2. Extract it to some location on your system, for example `/opt/dans.knaw.nl/dd-export-easy-verify-migration-info`.
 3. Start the service with the following command
         
-        opt/dans.knaw.nl/dd-verify-migration/bin/dd-verify-migration server \
-         /opt/dans.knaw.nl/dd-verify-migration/cfg/config.yml 
+        opt/dans.knaw.nl/dd-export-easy-verify-migration-info/bin/dd-export-easy-verify-migration-info server \
+         /opt/dans.knaw.nl/dd-export-easy-verify-migration-info/cfg/config.yml 
         
 
-The file `/opt/dans.knaw.nl/dd-verify-migration/cfg/account-substitutes.csv` will be delivered with just a header line.
+The file `/opt/dans.knaw.nl/dd-export-easy-verify-migration-info/cfg/account-substitutes.csv` will be delivered with just a header line.
 The content of the file should equal the substitution file configured for `easy-convert-bag-to-deposit`.
 To ignore substitution for testing purposes: add just one line with identical values in both columns.
 
@@ -111,8 +111,8 @@ Prerequisites:
 Steps:
     
 ```text
-git clone https://github.com/DANS-KNAW/dd-verify-migration.git
-cd dd-verify-migration 
+git clone https://github.com/DANS-KNAW/dd-export-easy-verify-migration-info.git
+cd dd-export-easy-verify-migration-info 
 mvn clean install
 ```    
 

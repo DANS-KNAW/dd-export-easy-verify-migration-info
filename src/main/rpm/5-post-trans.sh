@@ -17,7 +17,7 @@
 
 #include <service.sh>
 
-MODULE_NAME=dd-verify-migration
+MODULE_NAME=dd-export-easy-verify-migration-info
 PHASE="POST-TRANS"
 
 echo "$PHASE: START"

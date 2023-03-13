@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-site_name: dd-verify-migration
+site_name: dd-export-easy-verify-migration-info
 theme:
   name: readthedocs
 
-repo_name: DANS-KNAW/dd-verify-migration
-repo_url: https://github.com/DANS-KNAW/dd-verify-migration
+repo_name: DANS-KNAW/dd-export-easy-verify-migration-info
+repo_url: https://github.com/DANS-KNAW/dd-export-easy-verify-migration-info
 
 nav:
   - Manual: index.md
