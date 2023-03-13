@@ -22,7 +22,6 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import net.sourceforge.argparse4j.inf.Namespace;
 import net.sourceforge.argparse4j.inf.Subparser;
-import nl.knaw.dans.lib.util.DefaultConfigEnvironmentCommand;
 import nl.knaw.dans.migration.DdExportEasyVerifyMigrationInfoConfiguration;
 import nl.knaw.dans.migration.core.EasyFileLoader;
 import nl.knaw.dans.migration.core.FedoraToBagCsv;

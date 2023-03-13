@@ -17,14 +17,7 @@ package nl.knaw.dans.migration.core;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import io.dropwizard.hibernate.UnitOfWork;
-import nl.knaw.dans.lib.dataverse.DataverseItemDeserializer;
-import nl.knaw.dans.lib.dataverse.MetadataFieldDeserializer;
-import nl.knaw.dans.lib.dataverse.ResultItemDeserializer;
-import nl.knaw.dans.lib.dataverse.model.dataset.MetadataField;
-import nl.knaw.dans.lib.dataverse.model.dataverse.DataverseItem;
-import nl.knaw.dans.lib.dataverse.model.search.ResultItem;
 import nl.knaw.dans.migration.core.MetadataHandler.DatasetMetadata;
 import nl.knaw.dans.migration.core.tables.ExpectedDataset;
 import nl.knaw.dans.migration.core.tables.ExpectedFile;
@@ -72,11 +65,6 @@ public class VaultLoader extends ExpectedLoader {
 
 
     mapper = new ObjectMapper();
-    SimpleModule module = new SimpleModule();
-    module.addDeserializer(MetadataField.class, new MetadataFieldDeserializer());
-    module.addDeserializer(DataverseItem.class, new DataverseItemDeserializer());
-    module.addDeserializer(ResultItem.class, new ResultItemDeserializer(mapper));
-    mapper.registerModule(module);
   }
 
   @UnitOfWork("hibernate")

@@ -19,7 +19,6 @@ package nl.knaw.dans.migration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
 import io.dropwizard.db.DataSourceFactory;
-import nl.knaw.dans.lib.util.DataverseClientFactory;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
@@ -27,9 +26,6 @@ import javax.validation.constraints.NotNull;
 import java.net.URI;
 
 public class DdExportEasyVerifyMigrationInfoConfiguration extends Configuration {
-  @Valid
-  @NotNull
-  private DataverseClientFactory dataverse;
 
   @Valid
   @NotNull
@@ -71,14 +67,6 @@ public class DdExportEasyVerifyMigrationInfoConfiguration extends Configuration 
 
   public void setVerificationDatabase(DataSourceFactory dataSourceFactory) {
     this.verificationDatabase = dataSourceFactory;
-  }
-
-  public DataverseClientFactory getDataverse() {
-    return dataverse;
-  }
-
-  public void setDataverse(DataverseClientFactory dataverse) {
-    this.dataverse = dataverse;
   }
 
   public URI getBagStoreBaseUri() {
