@@ -22,15 +22,15 @@
     <parent>
         <groupId>nl.knaw.dans</groupId>
         <artifactId>dd-parent</artifactId>
-        <version>0.16.0</version>
+        <version>0.17.0</version>
     </parent>
 
     <artifactId>dd-export-easy-verify-migration-info</artifactId>
     <version>2.0.0-SNAPSHOT</version>
 
-    <name>DD Verify Migration</name>
+    <name>DD Export EASY Verify Migration Info</name>
     <url>https://github.com/DANS-KNAW/${project.artifactId}</url>
-    <description>Database for comparing expected and actual files after migration to data station</description>
+    <description>Tool to export information from EASY for verification of the migration to a Data Station</description>
     <inceptionYear>2021</inceptionYear>
 
     <properties>
