@@ -18,11 +18,11 @@ package nl.knaw.dans.migration;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import io.dropwizard.Application;
+import io.dropwizard.core.Application;
+import io.dropwizard.core.setup.Bootstrap;
+import io.dropwizard.core.setup.Environment;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.hibernate.HibernateBundle;
-import io.dropwizard.setup.Bootstrap;
-import io.dropwizard.setup.Environment;
 import nl.knaw.dans.migration.cli.LoadFromFedoraCommand;
 import nl.knaw.dans.migration.cli.LoadFromVaultCommand;
 import nl.knaw.dans.migration.core.tables.ActualDataset;
