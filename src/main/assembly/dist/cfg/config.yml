@@ -55,8 +55,6 @@ verificationDatabase:
 #
 logging:
   level: INFO
-  loggers:
-    "org.hibernate.engine.internal.StatisticalLoggingSessionEventListener": WARN
   appenders:
     - type: console
       logFormat: "%-5p [%d{ISO8601}] [%t] %c: %m%n%rEx"
@@ -66,3 +64,5 @@ logging:
       currentLogFilename: dd-export-easy-verify-migration-info.log
       archivedLogFilenamePattern: dd-export-easy-verify-migration-info-%d.log
       archivedFileCount: 5
+  loggers:
+    'org.hibernate.engine.internal.StatisticalLoggingSessionEventListener': 'OFF'
